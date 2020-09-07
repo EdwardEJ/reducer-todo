@@ -1,0 +1,18 @@
+import React, { useReducer } from 'react';
+import './App.css';
+
+function reducer() {
+
+}
+
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        {'hello'}
+      </header>
+    </div>
+  );
+}
+
+export default App;
