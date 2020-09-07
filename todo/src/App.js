@@ -12,6 +12,7 @@ function reducer(todos, action) {
   switch (action.type) {
     case ACTIONS.ADD_TODO:
       return [...todos, newTodo(action.payload.name)]
+
     case ACTIONS.TOGGLE_TODO:
       return todos.map(todo => {
         if (todo.id === action.payload.id) {
@@ -19,8 +20,9 @@ function reducer(todos, action) {
         }
         return todo
       })
+
     case ACTIONS.DELETE_TODO:
-      return todos.filter(todo => todo.id !== action.payload.id)
+      return todos.filter(todo => !todo.complete)
     default:
       return todos
   }
